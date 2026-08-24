@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-service
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: product-service
+
+  template:
+    metadata:
+      labels:
+        app: product-service
+
+    spec:
+      containers:
+        - name: product-service
+          image: hanumantharao1986/product-service:1.0
+          imagePullPolicy: IfNotPresent
+
+          ports:
+            - containerPort: 8001
+
+          env:
+            - name: DATABASE_URL
+              value: "postgresql://postgres:Haswitha%401986@host.docker.internal:5432/product_db"
