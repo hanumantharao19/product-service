@@ -1,5 +1,4 @@
 # product-service
-# test
 ## Database Configuration
 
 The `product-service` uses the `DATABASE_URL` environment variable.
