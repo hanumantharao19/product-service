@@ -132,5 +132,5 @@ def delete_product(
     db.commit()
 
     return {
-        "message": "Product deleted successfully"
+        "message": "Product was deleted successfully"
     }
